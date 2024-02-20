@@ -1,0 +1,235 @@
+@font-face {
+  font-family: fontCarta;
+  src: url(Cheeky\ Rabbit.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: fontCarta, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to top, #e54c4c, #f73030);
+}
+
+.input_container {
+  width: 60%;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #ffaaa1;
+  gap: 1rem;
+  outline: 4px solid #f5f5f5;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: absolute;
+}
+
+.input_container p {
+  font-size: 5rem;
+  color: #ffffff;
+  font-family: fontCarta;
+}
+
+.input_container input {
+  width: 20rem;
+  height: 2rem;
+  background: #e54c4c;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  color: #ffffff;
+  font-size: 1.6rem;
+}
+
+.input_container input::placeholder {
+  color: #f5f5f5;
+  font-family: fontCarta;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.btn_input {
+  width: 10rem;
+  height: 2rem;
+  background-color: #dd6363;
+  color: #ffffff;
+  border: #f5f5f5;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+}
+.btn_input:hover {
+  transform: scale(1.1);
+}
+.card {
+  color: #1b1b1b;
+  width: 30rem;
+  height: 40rem;
+  position: relative;
+  outline: 4px solid #f5f5f5;
+  border-radius: 8px;
+  line-height: 150%;
+  padding: 16px;
+  background: #2d179c;
+  background-blend-mode: multiply;
+  background: linear-gradient(to top, #e54c4c, #f73030);
+  transition: background-color 1s ease-in-out;
+  overflow: hidden;
+  z-index: 10;
+  left: 0;
+}
+
+.card-front {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  top: 15rem;
+  transition: transform 1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.card-back {
+  min-height: 100%;
+  transform: translateX(120%);
+  transition: transform 1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card-back p {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: fontCarta;
+}
+
+/*Text*/
+.title,
+.subtitle,
+.title2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.title2 {
+  position: absolute;
+  top: 10rem;
+  font-size: 2rem;
+}
+/*Text divider*/
+.title::after {
+  content: "";
+  display: block;
+  width: 50%;
+  border-radius: 50%;
+  height: 2px;
+  margin: 2px auto;
+  background-color: #ffffff;
+}
+
+/*Hover*/
+.card:hover {
+  background-color: #ffffff25;
+}
+
+.card:hover .card-front {
+  transform: translateX(-100%);
+}
+
+.card:hover .card-back {
+  transform: translateX(0);
+}
+
+.hidden {
+  display: none;
+}
+
+.close-modal {
+  position: absolute;
+  top: 0.2rem;
+  right: 1.8rem;
+  font-size: 5rem;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+  background: none;
+  z-index: 5;
+  font-family: sans-serif;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.content-coracao {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  margin: 50px auto;
+  -webkit-animation: pulsa 1s linear 0s infinite;
+  left: 12rem;
+}
+@keyframes pulsa {
+  0% {
+    transform: scale(0.9) rotate(0deg);
+  }
+  50% {
+    transform: scale(1) rotate(0deg);
+  }
+  70% {
+    transform: scale(1.1) rotate(0deg);
+  }
+  80% {
+    transform: scale(1.2) rotate(0deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+.square {
+  transform: rotate(45deg);
+  width: 50px;
+  height: 50px;
+  background: #ffaaa1;
+  position: absolute;
+  top: 30px;
+}
+.circle:after,
+.circle:before {
+  content: "";
+  position: absolute;
+  width: 54px;
+  height: 55px;
+  border-radius: 50%;
+  background: #ffaaa1;
+}
+.circle:after {
+  left: 5px;
+  top: 6px;
+}
+.circle:before {
+  right: 5px;
+  top: 6px;
+}

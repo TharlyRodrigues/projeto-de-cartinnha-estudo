@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css.css" />
+    <title>Cartinha de amor</title>
+  </head>
+  <body>
+    <div class="input_container">
+      <p>Quem Voce Ama?</p>
+      <input type="text" class="input_name" placeholder="escreva aqui" />
+      <button class="btn_input">Ver Cartinha</button>
+    </div>
+    <div class="container"></div>
+    <div class="modal hidden">
+      <div class="card">
+        <div class="card-front">
+          <div class="content-coracao">
+            <div class="square"></div>
+            <div class="circle"></div>
+          </div>
+          <p class="title"></p>
+          <p class="subtitle">I Love You <span>😍</span></p>
+        </div>
+        <div class="card-back">
+          <button class="close-modal">&times;</button>
+          <h1 class="title2"></h1>
+          <p>
+            Se nao der certo, a gente tenta de novo, de novo e de novo. E, se
+            nao der certo, a gente fica junto errado mesmo.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
+    <script src="java.js"></script>
+  </body>
+</html>
